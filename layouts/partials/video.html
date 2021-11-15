@@ -1,0 +1,24 @@
+<div class="videoContainer">
+<video class="videoClass" autoplay loop preload=auto>
+    <source src="/videos/RGBDepth.webm" type="video/webm">
+    There should have been a video here but your browser does not seem
+    to support it.
+</video>
+    <div class="videoOverlay">
+           <div class="block">
+                {{ with .Site.Params.hero.heading }}
+                    <h2>{{ . }}</h2>
+                {{ end }}
+                {{ with .Site.Params.hero.description }}
+                    <p>{{ . }}</p>
+                {{ end }}
+                {{ if .Site.Params.hero.button }}
+                    <ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                        <li class="list-inline-item">
+                            <a href="{{ with .Site.Params.hero.btnURL }}{{.}}{{ end }}" target="_blank" class="btn btn-main">{{ with .Site.Params.hero.btnText }}{{.}}{{ end }}</a>
+                        </li>
+                    </ul>
+                {{ end }}
+            </div>
+    </div>
+</div>
